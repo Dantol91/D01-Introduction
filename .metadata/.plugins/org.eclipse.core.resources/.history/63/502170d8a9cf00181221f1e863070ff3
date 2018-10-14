@@ -3,7 +3,6 @@ package services;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,8 +61,6 @@ public class ShoutService {
 		this.shoutRepository.save(shout);
 
 	}
-
-	// Other business methods -------------------------------------------------
 
 	public Map<String, Double> computeStatistics() {
 		Map<String, Double> result;

@@ -62,7 +62,7 @@ public class ShoutService {
 		this.shoutRepository.save(shout);
 
 	}
-
+	
 	// Other business methods -------------------------------------------------
 
 	public Map<String, Double> computeStatistics() {

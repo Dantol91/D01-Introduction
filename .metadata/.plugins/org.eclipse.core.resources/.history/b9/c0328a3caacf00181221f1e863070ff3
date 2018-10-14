@@ -23,11 +23,12 @@ import services.ShoutService;
 @Controller
 @RequestMapping("/administrator")
 public class AdministratorController extends AbstractController {
-
+	
+	
 	// Services ---------------------------------------------------------------
 
-	@Autowired
-	private ShoutService	shoutService;
+		@Autowired
+		private ShoutService	shoutService;
 
 
 	// Constructors -----------------------------------------------------------
