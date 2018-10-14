@@ -1,0 +1,39 @@
+
+package services;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import domain.Shout;
+
+@Service
+@Transactional
+public class ShoutService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private ShoutRepository	shoutRepository;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public ShoutService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Collection<Shout> findAll() {
+		Collection<Shout> result;
+
+		result = this.shoutRepository.findAll();
+		Assert.notNull(result);
+
+		return result;
+	}
+}
