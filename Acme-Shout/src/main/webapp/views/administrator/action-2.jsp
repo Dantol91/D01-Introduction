@@ -17,3 +17,72 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <p><spring:message code="administrator.action.2" /></p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Action-2.js Chart</title>
+</head>
+<body>
+  <div class="container">
+    <canvas id="action-2"></canvas>
+  </div>
+
+  <script>
+    let action2 = document.getElementById('action-2').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart = new Chart(action2, {
+      type:'bar', 
+      data:{
+        labels:['<spring:message code="administrator.count.all.shouts" />', 
+                '<spring:message code="administrator.count.short.shouts" />', 
+                '<spring:message code="administrator.count.long.shouts" />'],
+        datasets:[{
+          label:'<spring:message code="administrator.report" />',
+          backgroundColor:[
+              'rgba(140, 70, 210, 1)',
+              'rgba(140, 70, 210, 1)',
+              'rgba(140, 70, 210, 1)'],
+          data:[4,3,1,0],
+         
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+</body>
+

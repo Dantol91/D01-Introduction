@@ -18,7 +18,7 @@
 
 <p><spring:message code="administrator.action.1" /></p>
 
-<table>
+<table style="width:200px">
 	<tr>
 		<th><spring:message code="administrator.indicator" /></th>
 		<th><spring:message code="administrator.value" /></th>
