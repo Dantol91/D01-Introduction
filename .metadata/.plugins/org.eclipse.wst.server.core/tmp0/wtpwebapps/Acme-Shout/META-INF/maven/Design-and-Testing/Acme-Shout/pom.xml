@@ -21,7 +21,7 @@
 
 	<groupId>Design-and-Testing</groupId>
 	<artifactId>Acme-Shout</artifactId>
-	<version>1.0</version>
+	<version>1.18</version>
 	<packaging>war</packaging>
 	
 	<properties>
@@ -30,8 +30,9 @@
 
 	<!-- Indexing information -->
 
-	<name>Acme Shouts</name>
-	<url>http://www.Acme-Shout.com</url>
+	<name>Sample Project</name>
+	<url>http://www.sample-project.com</url>
+	<description>This is D&amp;T's sample project.</description>
 	
 	<!-- Build commands -->
 
@@ -312,5 +313,4 @@
 		
 	</dependencies>
 
-	<description>This system allows people share their favourite Shouts.</description>
 </project> 
