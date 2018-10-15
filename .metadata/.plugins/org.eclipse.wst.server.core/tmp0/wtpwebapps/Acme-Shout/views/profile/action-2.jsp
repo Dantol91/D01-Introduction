@@ -19,18 +19,18 @@
 <p><spring:message code="profile.action.2" /></p>
 
 <form:form modelAttribute="calculator">
-	<form:input path="x" /> <form:errors path="X" /> <br />
-	<form:input path="y" /> <form:errors path="y" /> <br />
+	<form:input path="x" /> <form:errors cssClass="error" path="X" /><br />
+	<form:input path="y" /> <form:errors cssClass="error" path="y" /><br />
 	<form:select path="operator" >
 		<form:option value="+" />
 		<form:option value="-" />
 		<form:option value="*" />
 		<form:option value="/" />
 	</form:select>
-	<form:errors path="operator" /> <br />
+	<form:errors cssClass="error" path="operator" /> <br />
 	<hr />
 	<jstl:out value="${calculator.result}" />
 	<br />
-	<input type="submit"
+	<input type="submit" 
 		   value="<spring:message code='profile.compute'/>" />
 </form:form>

@@ -26,21 +26,21 @@
 		<spring:message code="customer.username" />:
 	</form:label>
 	<form:input path="username" />
-	<form:errors path="username" />
+	<form:errors cssClass="error" path="username" />
 	<br />
 	
 	<form:label path="link">
 		<spring:message code="customer.link" />:
 	</form:label>
 	<form:input path="link" />
-	<form:errors path="link" />
+	<form:errors cssClass="error" path="link" />
 	<br />
 	
 	<form:label path="text">
 		<spring:message code="customer.text" />:
 	</form:label>
 	<form:textarea path="text" />
-	<form:errors path="text" />
+	<form:errors cssClass="error" path="text" />
 	<br />
 	
 	
